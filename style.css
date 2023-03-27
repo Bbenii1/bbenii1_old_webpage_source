@@ -1,0 +1,50 @@
+
+#video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+z-index: -10;
+}
+#cim {
+    display: block;
+    margin: auto;
+    margin-top: 20%;
+    width: fit-content;
+}
+#beni {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 100px;
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 30px;
+    text-transform: capitalize;
+}
+#beni::after {
+    content: '';
+    height: 5px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+#beni:hover::after {
+    width: 100%;
+}
+#socials {
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+}
+div {
+    color: white;
+}
