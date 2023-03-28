@@ -10,22 +10,39 @@
 <body>
     <div id="cim"><span id="beni">Benii1</span></div>
     <div id="socials">
-        <div>hihi</div>
-        <div>hihi</div>
-        <div>hihi</div>
-        <div>hihi</div>
-        <div>hihi</div>
+        <div class="social"><a href="">Steam</a></div>
+        <div class="social"><a href="">Instagram</a></div>
+        <div class="social"><a href="">Twitter</a></div>
+        <div class="social"><a href="">GitHub</a></div>
     </div>
 
     <video autoplay loop muted id="video" preload="auto">
-        <source src="video.mp4" type="video/mp4">
+        <source src="videomain.mp4" type="video/mp4">
         video
     </video>
+    <div onclick="toggleMute()"  id="unmute" class="unmute"></div>
     <script>
         document.getElementById('video').play();
         document.getElementById('video').muted=false;
-        document.getElementById('video').volume=0.2;
+        document.getElementById('video').volume=0.1;
+        
+        function toggleMute() {
+        var myAudio = document.getElementById('video');
+        myAudio.muted = !myAudio.muted;
+        }
+
+        var unmute = document.getElementById('unmute');
+        console.log(unmute);
+        if(unmute){
+            unmute.addEventListener('click', function(unmute){
+                unmute.target.classList.toggle('mute');
+        }) 
+        }
+
+        
     </script>
     
+    
+
 </body>
 </html>
