@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="container">
+        <div id="vidcontainer">
+            <video autoplay loop muted id="video" preload="auto">
+                <source src="videomain.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
     <div id="cim"><span id="beni">Benii1</span></div>
     <div id="socials">
         <div class="social"><a href="https://steamcommunity.com/id/benii1_/" target="_blank">Steam</a></div>
@@ -18,10 +25,7 @@
         <div class="social"><a href="https://freecash.com/r/bbenii1" target="_blank">FreeCash</a></div>
     </div>
 
-    <video autoplay loop muted id="video" preload="auto">
-        <source src="videomain.mp4" type="video/mp4">
-        video
-    </video>
+    
     <div onclick="toggleMute()"  id="unmute" class="unmute"></div>
     <script>
         document.getElementById('video').play();
