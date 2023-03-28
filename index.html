@@ -8,7 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <video loop="" playsinline="" preload="auto" class="fullscreen bg-video" id="video">
+    <script>
+        function videoPlay() {
+            var video = document.getElementById("video");
+            video.volume = 0.2, 0;
+            video.play()
+        }
+    
+    /*document.getElementById('video').play();
+    document.getElementById('video').muted=false;
+    document.getElementById('video').volume=0.1;*/
+    
+    function toggleMute() {
+    var myAudio = document.getElementById('video');
+    myAudio.muted = !myAudio.muted;
+    }
+
+    var unmute = document.getElementById('unmute');
+    console.log(unmute);
+    if(unmute){
+        unmute.addEventListener('click', function(unmute){
+            unmute.target.classList.toggle('mute');
+    }) 
+    }
+    </script>
+
+
+
+    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <div class="overlay fullscreen">
+        <label for="overlay-toggle" onclick="videoPlay()">
+        <span class="no-hover" >click</span>
+        <span class="hover" >click</span>
+        </label>
+        </div>
+
+
+
+    <video loop playsinline preload="auto" class="fullscreen" id="video">
         <source src="videomain.mp4" type="video/mp4">
     </video>
     <div id="cim"><span id="beni">Benii1</span></div>
@@ -23,24 +60,7 @@
 
     
     <div onclick="toggleMute()"  id="unmute" class="unmute"></div>
-    <script>
-        document.getElementById('video').play();
-        document.getElementById('video').muted=false;
-        document.getElementById('video').volume=0.1;
-        
-        function toggleMute() {
-        var myAudio = document.getElementById('video');
-        myAudio.muted = !myAudio.muted;
-        }
-
-        var unmute = document.getElementById('unmute');
-        console.log(unmute);
-        if(unmute){
-            unmute.addEventListener('click', function(unmute){
-                unmute.target.classList.toggle('mute');
-        }) 
-        }
-    </script>
+    
 
     <a href="https://youtu.be/akgQNBv5A1Y?t=46" target="_blank" id="source">Video source</a>
     

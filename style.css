@@ -14,7 +14,68 @@ video {
     overflow-clip-margin: content-box;
     overflow: clip;
 }
-    #cim {
+.overlay {
+    z-index: 1;
+    background-color: #000;
+    opacity: .9;
+    
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: #fff;
+    font-size: 2rem
+}
+.no-hover {
+    display: block;
+}
+
+.hover {
+    display: none
+}
+#overlay-toggle:checked~.overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade,hide;
+    animation-delay: 0s,600ms;
+    animation-duration: 600ms,1ms
+}
+
+#overlay-toggle:checked~.overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: 500ms
+}
+
+@media(hover: hover) {
+    .hover {
+        display:block
+    }
+
+    .no-hover {
+        display: none
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden
+    }
+}
+
+
+
+
+#cim {
     display: block;
     margin: auto;
     margin-top: 20%;
