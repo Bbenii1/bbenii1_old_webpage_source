@@ -29,6 +29,10 @@ video {
     color: #fff;
     font-size: 2rem
 }
+#overlay-toggle {
+    position: absolute;
+    display: none
+}
 .no-hover {
     display: block;
 }
