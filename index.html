@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Benii1</title>
     <link rel="stylesheet" href="style.css">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/gif" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:type" content="website">
+<meta property="og:url" content="benii1.info">
 </head>
 <body>
     <script>
@@ -25,7 +30,6 @@
     }
 
     var unmute = document.getElementById('unmute');
-    console.log(unmute);
     if(unmute){
         unmute.addEventListener('click', function(unmute){
             unmute.target.classList.toggle('mute');
@@ -35,7 +39,7 @@
 
 
 
-    <input type="checkbox" autocomplete="off" id="overlay-toggle">
+    <input type="checkbox" id="overlay-toggle">
     <div class="overlay fullscreen">
         <label for="overlay-toggle" onclick="videoPlay()">
         <span class="no-hover" >click</span>
@@ -46,7 +50,7 @@
 
 
     <video loop playsinline preload="auto" class="fullscreen" id="video">
-        <source src="videomain.mp4" type="video/mp4">
+        <source src="video.mp4" type="video/mp4">
     </video>
     <div id="cim"><span id="beni">Benii1</span></div>
     <div id="socials">
