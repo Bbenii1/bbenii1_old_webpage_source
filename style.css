@@ -16,7 +16,7 @@ video {
 .overlay {
     z-index: 1;
     background-color: #000;
-    opacity: .9;
+    opacity: .97;
     
 }
 
@@ -34,10 +34,14 @@ video {
 }
 .no-hover {
     display: block;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
 }
 
 .hover {
-    display: none
+    display: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
 }
 #overlay-toggle:checked~.overlay {
     animation-fill-mode: forwards;
