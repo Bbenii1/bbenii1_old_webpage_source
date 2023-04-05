@@ -1,12 +1,12 @@
-        function videoPlay() {
-            var video = document.getElementById("video");
-            video.volume = 0.2, 0;
-            video.play()
-        }
+    /*function videoPlay() {
+        var video = document.getElementById("video");
+        video.volume = 0.2, 0;
+        video.play()
+    }
     
-    /*document.getElementById('video').play();
+    document.getElementById('video').play();
     document.getElementById('video').muted=false;
-    document.getElementById('video').volume=0.1;*/
+    document.getElementById('video').volume=0.1;
     
     function toggleMute() {
     var myAudio = document.getElementById('video');
@@ -19,4 +19,4 @@
         unmute.addEventListener('click', function(unmute){
             unmute.target.classList.toggle('mute');
     }) 
-    }
+    }*/
