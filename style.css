@@ -63,7 +63,6 @@ body::before {
 #cim {
     display: block;
     margin: auto;
-    margin-top: 18%;
     width: fit-content;
 }
 #beni {
@@ -77,6 +76,23 @@ body::before {
     text-transform: capitalize;
     font-weight: lighter;
     transition: .5s;
+}
+@media only screen and (max-width: 600px) {
+    #beni {
+        margin-top: -10%;
+    }
+}
+@media only screen and (max-width: 435px) {
+    #beni {
+        font-size: 80px;
+        margin-top: -20%;
+    }
+}
+@media only screen and (max-width: 350px) {
+    #beni {
+        margin-top: -40%;
+        font-size: 60px;
+    }
 }
 /*#beni::after {
     content: '';
