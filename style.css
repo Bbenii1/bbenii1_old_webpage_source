@@ -1,93 +1,74 @@
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
 body {
-    background-color: black;
+  margin-top: 13.5rem;
+  color: #000;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  animation: bg-scrolling-reverse 0.92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
 }
-.fullscreen {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    min-height: 100vh;
-    min-width: 100vw;
-}
-video {
-    object-fit: contain;
-    overflow: clip;
-}
-.overlay {
-    z-index: 1;
-    background-color: #000;
-    opacity: .97;
-    
-}
-
-.overlay label {
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    height: 100vw;
-    color: #fff;
-    font-size: 2rem
-}
-#overlay-toggle {
-    position: absolute;
-    display: none
-}
-.no-hover {
-    display: block;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: capitalize;
+body::before {
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
 }
 
-.hover {
-    display: none;
-    font-family: 'Courier New', Courier, monospace;
-    text-transform: capitalize;
-}
-#overlay-toggle:checked~.overlay {
-    animation-fill-mode: forwards;
-    animation-name: fade,hide;
-    animation-delay: 0s,600ms;
-    animation-duration: 600ms,1ms
-}
-
-#overlay-toggle:checked~.overlay label {
-    animation-fill-mode: forwards;
-    animation-name: fade;
-    animation-delay: 0s;
-    animation-duration: 500ms
-}
-
-@media(hover: hover) {
-    .hover {
-        display:block
-    }
-
-    .no-hover {
-        display: none
-    }
-}
-
-@keyframes fade {
-    to {
-        opacity: 0
-    }
-}
-
-@keyframes hide {
-    to {
-        visibility: hidden
-    }
-}
 
 #cim {
     display: block;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 18%;
     width: fit-content;
 }
 #beni {
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    color: black;
     font-size: 100px;
     list-style-type: none;
     display: inline-block;
@@ -97,11 +78,11 @@ video {
     font-weight: lighter;
     transition: .5s;
 }
-#beni::after {
+/*#beni::after {
     content: '';
     height: 5px;
     width: 0;
-    background: white;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -112,7 +93,7 @@ video {
 }
 #beni:hover {
     font-size: 102px;
-}
+}*/
 #socials {
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
@@ -127,13 +108,13 @@ video {
     
 }
 .social {
-    color: white;
+    color: black;
     text-align: center;
     margin: 20px;
 }
 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
     transition: 0.5s;
@@ -147,7 +128,7 @@ a::after {
     content: '';
     height: 2px;
     width: 0;
-    background: white;
+    background: black;
     position: absolute;
     left: 0;
     bottom: -3px;
@@ -179,7 +160,7 @@ a:hover::after {
 }
 #source {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     transition: 0.5s;
