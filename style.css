@@ -69,6 +69,7 @@ body::before {
     font-family: 'Courier New', Courier, monospace;
     color: black;
     font-size: 100px;
+    margin-top: 100px;
     list-style-type: none;
     display: inline-block;
     position: relative;
@@ -94,22 +95,6 @@ body::before {
         font-size: 60px;
     }
 }
-/*#beni::after {
-    content: '';
-    height: 5px;
-    width: 0;
-    background: black;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transition: 0.5s;
-}
-#beni:hover::after {
-    width: 100%;
-}
-#beni:hover {
-    font-size: 102px;
-}*/
 #socials {
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
