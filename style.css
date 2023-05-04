@@ -39,7 +39,7 @@
   }
 }
 body {
-  margin-top: 20rem;
+  margin-top: 15rem;
   color: #000;
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
   text-align: center;
@@ -64,6 +64,7 @@ body::before {
     display: block;
     margin: auto;
     width: fit-content;
+    padding: 0;
 }
 #beni {
     font-family: 'Courier New', Courier, monospace;
@@ -77,6 +78,7 @@ body::before {
     text-transform: capitalize;
     font-weight: lighter;
     transition: .5s;
+    height: 120px;
 }
 @media only screen and (max-width: 600px) {
     #beni {
@@ -172,6 +174,7 @@ a:hover::after {
 #wtf {
   margin: auto;
   display: block;
+  margin-top: 15rem;
 }
 #wtf video {
   height: 30vw;
