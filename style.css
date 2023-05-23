@@ -1,180 +1,125 @@
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px;
-  }
-}
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Cairo');
+
 body {
-  margin-top: 15rem;
-  color: #000;
-  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #fefefe;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  line-height: 2;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
   text-align: center;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-  -moz-animation: bg-scrolling-reverse 0.92s infinite;
-  -o-animation: bg-scrolling-reverse 0.92s infinite;
-  animation: bg-scrolling-reverse 0.92s infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear;
 }
-body::before {
-  font-size: 8rem;
-  font-weight: 100;
-  font-style: normal;
+
+.text {
+  font-family: "Cairo";
+  text-align: center;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 98vh;
+  letter-spacing: 1px;
+  line-height:2
+}
+
+h1 {
+  background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin: 0px 0;
 }
 
 
-#cim {
-    display: block;
-    margin: auto;
-    width: fit-content;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600');
+
+
+.nav {
+  font-family: 'Cairo';
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+
 }
-#beni {
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    font-size: 100px;
-    margin-top: 100px;
-    list-style-type: none;
-    display: inline-block;
-    position: relative;
-    margin: 0 30px;
-    text-transform: capitalize;
-    font-weight: lighter;
-    transition: .5s;
-    height: 120px;
-}
-@media only screen and (max-width: 600px) {
-    #beni {
-        margin-top: -10%;
-    }
-}
-@media only screen and (max-width: 435px) {
-    #beni {
-        font-size: 80px;
-        margin-top: -20%;
-    }
-}
-@media only screen and (max-width: 350px) {
-    #beni {
-        margin-top: -40%;
-        font-size: 60px;
-    }
-}
-#socials {
-    margin: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 30px;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: repeat(auto-fit, 200px);
-    text-align: center;
-    justify-content: center;
-    flex-flow: wrap;
-    
-}
-.social {
-    color: black;
-    text-align: center;
-    margin: 20px;
-}
-a {
-    text-decoration: none;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 25px;
-    transition: 0.5s;
-    position: relative;
-    
-}
-a:hover {
-    font-size: 27px;
-}
-a::after {
-    content: '';
-    height: 2px;
-    width: 0;
-    background: black;
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    transition: 0.5s;
-}
-a:hover::after {
-    width: 100%;
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .nav { grid-template-columns: repeat(3, 1fr); }
 }
 
-.unmute {
-    background: url(Unmute.png) no-repeat;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-size: contain;
-    display: block;
-    transition: .5s;
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .nav { grid-template-columns: repeat(5, 1fr); }
 }
-.mute {
-    background: url(Mute.png) no-repeat;
-    bottom: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-size: contain;
-    display: block;
+
+.nav * {
+  box-sizing: border-box;
+  transition: all .35s ease;
 }
-#source {
-    text-decoration: none;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 15px;
-    transition: 0.5s;
-    bottom: 0;
-    right: 0;
-    position: fixed;
+
+.nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  padding: 0;
 }
-#wtf {
-  margin: auto;
-  display: block;
-  margin-top: 15rem;
+
+.nav a {
+  padding: .5em .8em;
+  color: white;
+  position: relative;
+  text-decoration: none;
+  font-size: 20px;
 }
-#wtf video {
-  height: 30vw;
+
+.nav a::before,
+.nav a::after {
+  content: '';
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  transition: all .35s ease;
+  opacity: 0;
+}
+
+.nav a::before {
+  content: '';
+  right: 0;
+  top: 0;
+  border-top: 3px solid orange;
+  border-right: 3px solid rgb(151, 98, 0);
+  transform: translate(-100%, 50%);
+}
+
+.nav a:after {
+  content: '';
+  left: 0;
+  bottom: 0;
+  border-bottom: 3px solid orange;
+  border-left: 3px solid rgb(151, 98, 0);
+  transform: translate(100%, -50%)
+}
+
+.nav a:hover:before,
+.nav a:hover:after{
+  transform: translate(0,0);
+  opacity: 1;
+}
+
+.nav a:hover {
+  /*background-image: url(https://assets.materialup.com/uploads/40e7f9d8-58b3-4b23-b450-e0c11035c189/preview.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;*/
+  color: lightgray;
+}
